@@ -86,6 +86,13 @@ DATABASES = {
         # 'PASSWORD': 'root',
         # 'HOST': 'localhost',
         # 'PORT': '3306',
+
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nsk_psgress',
+        'USER': 'nsk_psgress_user',
+        'PASSWORD': '7b5su9L9BTcgF3zG1xeYZjL3WbTp26SP',
+        'HOST': 'dpg-d14nskc9c44c738b2a50-a',
+        'PORT': '5432',
     }
 }
 
