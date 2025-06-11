@@ -14,13 +14,22 @@
             font-family: 40px;
             padding: 5px;
         }
+
+        .input-box {
+            width: 50%;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="menu">
     {% if user.is_authenticated %}
         Welcome, {{ user.username }} |
-        <button><a href="{% url 'logout' %}">Logout</a></button> |
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <input type="submit" value="Logout"/>
+        </form>
+        <!-- <button><a href="{% url 'logout' %}">Logout</a></button> | -->
         <button><a href="{% url 'post_create' %}">New Post</a></button>
     {% else %}
         <button><a href="{% url 'login' %}">Login</a></button>
