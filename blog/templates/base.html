@@ -14,10 +14,10 @@
     <div class="menu">
     {% if user.is_authenticated %}
         Welcome, {{ user.username }} |
-        <a href="{% url 'logout' %}">Logout</a> |
-        <a href="{% url 'post_create' %}">New Post</a>
+        <button><a href="{% url 'logout' %}">Logout</a></button> |
+        <button><a href="{% url 'post_create' %}">New Post</a></button>
     {% else %}
-        <a href="{% url 'login' %}">Login</a>
+        <button><a href="{% url 'login' %}">Login</a></button>
     {% endif %}
   </div>
   <hr>
